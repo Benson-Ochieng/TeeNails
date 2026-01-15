@@ -1,0 +1,351 @@
+/*
+Theme Name: Lanotte Child Theme
+Theme URI: https://shtheme.com/demosd/lanotte
+Description: This is child theme of lanotte
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Version: 1.0
+Text Domain:  lanotte-child
+Template: lanotte
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+
+
+
+div.comment div.comment-body > p{
+    font-size: 1.1875rem;
+    padding-bottom: 40px;
+    border-bottom: 1px solid;
+    margin-bottom: 40px;
+    color: #6c757d;
+}
+.comment-form p.comment-form-cookies-consent{
+    display: none ;
+}
+.comments-wrapper .comment-body{
+    width: 100%;
+}
+.post-comments ul.children{
+    margin-left: 93px;
+}
+.post-comments form .logged-in-as{
+    padding-left: 12px;
+}
+.post-comments .comment-body .comment-meta h6 a{
+    text-transform: capitalize;
+}
+#newsletter-1 .newsletter-form .input-group p{
+    margin: 0;
+    padding: 0;
+}
+form div.input-group > span:has(input){
+    flex: 1 1 auto;
+}
+form div.input-group > span.input-group-btn{
+    flex: 1 1;
+}
+.newsletter-wrapper span.wpcf7-not-valid-tip{
+    color: #111;
+    margin-top: 10px;
+}
+.newsletter-wrapper form div.wpcf7-response-output{
+    margin: 30px 15% 0;
+}
+.post-content .post-categories > li > a{
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+div.post-meta{
+    display: inline-flex;
+}
+.post-content ul.post-categories, .post-content .post-categories > li{
+    display: inline-block;
+}
+.img-fluid{
+    width: 100%;
+}
+.post-content.bg--white-smoke{
+    padding: 30px 80px 60px;
+}
+.blog-list > h2{
+    padding: 0;
+}
+.blog-list > h2 > a:hover{
+    color: var(--clr-theme-color);
+}
+div.blog-btn > a{
+    padding: 13px 45px 10px;
+    color: #fff;
+    background-color: var(--clr-theme-color);
+    border-color: var(--clr-theme-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+div.blog-btn > a:hover{
+    background-color: #373b4d;
+    border-color: #373b4d;
+}
+ul.pagination li > .page-numbers{
+    color: #333233;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid #333233;
+    margin-right: 5px;
+    top: 0;
+    display: block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 48px;
+}
+ul.pagination li > .current{
+    color: #fff;
+    background-color: #333233;
+}
+ul.pagination li > .page-numbers:hover{
+    color: #fff;
+    background-color: #333233;
+}
+.masonry-image .hover-overlay > img.img-fluid, .blog-section .hover-overlay > img.img-fluid{
+    aspect-ratio: 7/6;
+}
+footer form div.input-group > span:first-child{
+    width: 50%;
+}
+footer form div.input-group{
+    height: 60px;
+}
+footer form .wpcf7-not-valid-tip{
+    margin-top: 7px;
+}
+footer form .wpcf7-response-output{
+    margin-left: 0;
+    margin-right: 0;
+}
+form div.contact-form span.wpcf7-spinner{
+    display: table;
+}
+section.gallery-section .masonry-image .hover-overlay >img.img-fluid{
+    aspect-ratio: unset;
+}
+h1.h1-lg{
+    font-size: 5rem;
+}
+.text-cap{
+    text-transform: capitalize;
+}
+.search_custom form input[type='text']{
+    width: 100%;
+    padding-right: 35px;
+}
+.search_custom form span.input-group-btn{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    z-index: 999;
+}
+.search_custom form span.input-group-btn > button{
+    border: 0;
+    background-color: unset;
+}
+li.wsarrow > a.nav-link:after{
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid;
+    content: "";
+    float: right;
+    right: 0;
+    height: 0;
+    margin: 0 0 0 14px;
+    position: absolute;
+    text-align: right;
+    top: 32px;
+    width: 0;
+}
+.wsmenu > .wsmenu-list > li > ul.sub-menu{
+    min-width: 150px;
+}
+.wpcf7-not-valid-tip{
+    color: #373b4d;
+}
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output{
+    border-color: #373b4d;
+}
+.wpcf7 form .wpcf7-response-output{
+    margin: 2em 0 1em;
+}
+.wpcf7-spinner{
+    display: none;
+}
+.blockChanger .chBody .stBlock{
+    margin: 30px 20px 15px 26px;
+}
+.m-none{
+    margin: 0;
+}
+.chBody .stBlock li:has(a.s_1 > img){
+    list-style: none;
+}
+.chBody .stBlock li a.s_1 > img{
+    width: 180px;
+    height: 195px;
+}
+.blockChanger .chBody .stBlock > li:has(>a>img).current{
+    display: none;
+}
+.elementor-html div.owl-carousel{
+    display: block;
+}
+.page-hero-section{
+    background: var(--clr-theme-color);
+}
+#promo-4:before, #promo-4:after, #banner-3{
+    background: var(--clr-theme-color);
+}
+div.dialog-widget.dialog-lightbox-widget{
+    display: none !important;
+}
+.banner-5-wrapper{
+    background: #f5f1f2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.bg-video{
+  position: relative;
+  overflow: hidden;
+}
+.bg-video:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 1;
+}
+video {
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#banner-1{
+    background: var(--clr-theme-color);
+}
+.elementor img.img-fluid{
+    width: auto;
+}
+.h2-lg > .elementor-widget-container > h2{
+    color: #373b4d;
+    font-family: 'Lora', serif;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.015625rem;
+    font-size: 3.5rem;
+}
+.h3-lg > .elementor-widget-container > h3{
+    color: #373b4d;
+    font-family: 'Lora', serif;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.015625rem;
+    font-size: 2.875rem;
+}
+.h5-xl > .elementor-widget-container > h5{
+    color: #373b4d;
+    font-family: 'Lora', serif;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.015625rem;
+    font-size: 1.75rem;
+}
+.txt-upcase > .elementor-widget-container > p{
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    margin-bottom: 0;
+}
+#video-1, #hero-3, #hero-9{
+    background: var(--clr-theme-color);
+}
+.pricing-4-list li:last-child{
+    margin-bottom:30px;
+}
+.banner-6-txt a{
+    text-decoration: underline !important;
+}
+li.foo-img > p:has(>a.image-link), li.foo-img p:empty{
+    display: none;
+}
+
+@media (max-width: 991.95px){
+    .newsletter-section .btn{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    li.wsarrow > a.nav-link:after{
+        content: none;
+    }
+    .footer-form .btn{
+        margin-top: 0;
+    }
+    div.row > div.width-100:has(.footer-img li.foo-img){
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .post-comments ul.children{
+        margin-left: 75px;
+    }
+    .post-content.bg--white-smoke{
+        padding: 10px 10px 40px;
+    }
+    .post-content.bg--white-smoke > div.blog-post-img{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .single-post-title{
+        padding: 0;
+    }
+    div.post-meta{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .post-content .post-categories > li > a{
+        vertical-align: middle;
+    }
+}
+.elementor-editor-active .slider .slides li {
+    opacity: 1;
+}
